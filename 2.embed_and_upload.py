@@ -1,5 +1,3 @@
-# BYOD: Bring Your Own Data
-file_path = './datasets/coffee_analysis.csv'
 
 ## Find some food reviews
 
@@ -14,6 +12,7 @@ import requests
 import util.embeddings as embeddings
 
 collection_name = 'COFFEE'
+# BYOD: Bring Your Own Data
 file_path = './datasets/coffee_analysis.csv'
 
 # 1. Open the CSV file, embed, and upload each row
