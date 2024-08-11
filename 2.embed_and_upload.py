@@ -5,13 +5,16 @@
 
 ## Knowledge base articles
 
+## CYbersecurity threats
+# https://www.kaggle.com/datasets/thedevastator/exploring-cybersecurity-risk-via-2022-cisa-vulne
+
 import csv
 import uuid
 
 import requests
 import util.embeddings as embeddings
+import util.key_params as key_params
 
-collection_name = 'COFFEE'
 # BYOD: Bring Your Own Data
 file_path = './datasets/coffee_analysis.csv'
 
@@ -38,7 +41,7 @@ with open(file_path, mode='r') as file:
               ]
             }
         
-        api_endpoint = f"http://localhost:6333/collections/{collection_name}/points"
+        api_endpoint = f"http://localhost:6333/collections/{key_params.COLLECTION_NAME}/points"
         response = requests.put(api_endpoint, json=row_item)
         if response.status_code == 200:
             print("Item uploaded successfully:", row)
