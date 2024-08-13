@@ -8,7 +8,6 @@ client = QdrantClient(host='localhost', port=6333)
 # Create a collection
 client.create_collection(
     collection_name=key_params.COLLECTION_NAME,
-    # MAKE SURE DIMENSIONS ARE CORRECT
     vectors_config=VectorParams(size=key_params.DIMENSIONS, distance="Cosine")
 )
 
