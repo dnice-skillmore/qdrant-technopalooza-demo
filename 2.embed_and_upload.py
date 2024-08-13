@@ -13,6 +13,7 @@ with open(key_params.DATA_FILE_PATH, mode='r') as file:
     # Get the header row
     header = next(csv_reader)
 
+    # Note: Please change the row values to fit your dataset
     for row in csv_reader:
         row_embedding = embeddings.generate_embedding(row['desc_1'])
 
