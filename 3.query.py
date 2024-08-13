@@ -2,20 +2,17 @@
 
 from qdrant_client import QdrantClient
 import util.embeddings as embeddings
-
+import util.key_params as key_params
 
 client = QdrantClient(host='localhost', port=6333)
-COLLECTION_NAME="coffee_reviews"
-DIMENSIONS=1536
 
 query = "Floral and fruity"
 
 # Embed the query
 query_embedding = embeddings.generate_embedding(query)
 
-
 search_result = client.search(
-    collection_name=COLLECTION_NAME,
+    collection_name=key_params.COLLECTION_NAME,
     query_vector=query_embedding,
     limit=1
 )
