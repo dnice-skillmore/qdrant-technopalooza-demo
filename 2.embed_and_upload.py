@@ -6,9 +6,6 @@ import requests
 import util.embeddings as embeddings
 import util.key_params as key_params
 
-# BYOD: Bring Your Own Data
-# Bunch of datasets online from Kaggle: https://www.kaggle.com/datasets?search=food
-
 # 1. Open the CSV file, embed, and upload each row
 with open(key_params.DATA_FILE_PATH, mode='r') as file:
     csv_reader = csv.DictReader(file)

@@ -14,7 +14,7 @@ query_embedding = embeddings.generate_embedding(query)
 search_result = client.search(
     collection_name=key_params.COLLECTION_NAME,
     query_vector=query_embedding,
-    limit=1
+    limit=5
 )
 
 for result in search_result:
