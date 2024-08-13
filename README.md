@@ -35,3 +35,6 @@ python 2.embed_and_upload.py
 ```
 
 ## Step 7: Start running queries!
+```bash
+python 3.query.py 
+```
